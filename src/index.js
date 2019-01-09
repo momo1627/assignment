@@ -5,14 +5,17 @@ import ReactDOM from 'react-dom';
 // import App from './App';
 
 //assignment 1
-import './assignment/01react.css'
-import img from './assignment/corgi.jpg'
-import Assign1 from './assignment/01react';
-const title = 'dog'
-const subtitle ='corgi'
-const description = 'cute'
-const element = <Assign1 title={title} img={img} subtitle={subtitle} description={description} /> 
-ReactDOM.render(element, document.getElementById('root'));
+// import './assignment/01react.css'
+// import img from './assignment/corgi.jpg'
+// import Assign1 from './assignment/01react';
+// const title = 'dog'
+// const subtitle ='corgi'
+// const description = 'cute'
+// const element = <Assign1 title={title} img={img} subtitle={subtitle} description={description} /> 
+
+//assginment 2
+import Clock from './assignment/02react'
+ReactDOM.render(<Clock />, document.getElementById('root'));
 
 
 
