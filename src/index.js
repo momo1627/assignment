@@ -13,15 +13,9 @@ import ReactDOM from 'react-dom';
 // const description = 'cute'
 // const element = <Assign1 title={title} img={img} subtitle={subtitle} description={description} /> 
 
-<<<<<<< HEAD
-//assginment 2
-import Clock from './assignment/02react'
-ReactDOM.render(<Clock />, document.getElementById('root'));
-=======
 //assignment 2
 import App from './assignment2/App'
 ReactDOM.render(<App />, document.getElementById('root'));
->>>>>>> master
 
 
 
