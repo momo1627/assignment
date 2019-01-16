@@ -14,8 +14,13 @@ import ReactDOM from 'react-dom';
 // const element = <Assign1 title={title} img={img} subtitle={subtitle} description={description} /> 
 
 //assignment 2
+<<<<<<< HEAD
 // import App from './assignment2/App'
 // ReactDOM.render(<App />, document.getElementById('root'));
+=======
+import App from './assignment2/App'
+ReactDOM.render(<App />, document.getElementById('root'));
+>>>>>>> 28b745d150e215858616e86d41b521e741325b83
 
 
 //practice 3
