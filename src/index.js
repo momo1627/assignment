@@ -14,19 +14,17 @@ import ReactDOM from 'react-dom';
 // const element = <Assign1 title={title} img={img} subtitle={subtitle} description={description} /> 
 
 //assignment 2
-<<<<<<< HEAD
 // import App from './assignment2/App'
 // ReactDOM.render(<App />, document.getElementById('root'));
-=======
-import App from './assignment2/App'
-ReactDOM.render(<App />, document.getElementById('root'));
 
->>>>>>> 043afca3d792bf92a9187b8112ceaab7b81c2929
 
 //practice 3
-import App from './practice3/app'
-ReactDOM.render(<App />, document.getElementById('root'));
+// import App from './practice3/app'
+// ReactDOM.render(<App />, document.getElementById('root'));
 
+//assignment 3 
+import App from './assignment3/pages/App'
+ReactDOM.render(<App />, document.getElementById('root'));
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.
