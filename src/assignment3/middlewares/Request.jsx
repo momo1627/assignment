@@ -7,27 +7,25 @@ async function GetPhotosId(input,number){
     const photoList = response.data.photos.photo;
     let result = [];
     for (let i = 0; i<number; i++){
-        result.push(photoList[i].id)
+        const info = {
+            id:photoList[i].id,
+            farm:photoList[i].farm,
+            server:photoList[i].server,
+            secret:photoList[i].secret
+        }
+        result.push(info)
     }
     return result;  
 }
 
-async function GetPhotosUrl(id){
-    let url = `https://api.flickr.com/services/rest/?method=flickr.photos.getInfo&api_key=${appKey}&photo_id=${id}&format=json&nojsoncallback=1`
-    const response = await axios.get(url);
-    const photoInfo = response.data.photo;
-    const photo = {
-        url:photoInfo.urls.url[0]._content,
-        id:photoInfo.id,
-    }
-    return photo
-    // console.log(photoInfo)
-}
-async function getPhotos(input,number){
-    const ids = await GetPhotosId(input,number);
+async function getPhotos(input,number,size){
+    const photoInfos = await GetPhotosId(input,number);
     let urls = [];
-    ids.map(async (id)=>{const result = await GetPhotosUrl(id); urls.push(result)})
-    return urls;
+    photoInfos.map(info=>{
+        const url = `https://farm${info.farm}.staticflickr.com/${info.server}/${info.id}_${info.secret}_${size}.jpg`
+        urls.push(url);
+    })
+    return urls
 }
 
 export default getPhotos
