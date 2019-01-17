@@ -1,12 +1,13 @@
 import React from 'react';
 import getPhotos from '../middlewares/Request';
 import Photo from '../components/Photo'
-class Gallary extends React.Component{
+export default class Gallary extends React.Component{
     constructor(){
         super();
         this.state={
             searchItem:'',
             searchNumber:'',
+            sources:[]
         }
     }
     handleChange =(e)=>{
@@ -16,18 +17,19 @@ class Gallary extends React.Component{
             [name]:value
         })
     };
-    handleSubmit =(e)=>{
+    handleSubmit = async (e)=>{
         e.preventDefault();
         const item = this.state.searchItem;
         const number = this.state.searchNumber;
-        const sources = getPhotos(item,number);
+        const sources = await getPhotos(item,number);
         this.setState({
             sources:sources,
         })
     };
     renderElement =()=>{
         const sources = this.state.sources;
-        const element = sources.map(source=>{return(<Photo url={source.url} key={source.url} />)})
+        // const element = sources.map(source=>{return(<Photo url={source} key={source} />)})
+        const element = sources.map(source =>{return (<span>{source}</span>)})
         return element;
     }
     render(){
@@ -39,6 +41,7 @@ class Gallary extends React.Component{
                 <input type="button" onClick={this.handleSubmit} value='Search'/>
                 <div>
                     <h3>{this.state.searchItem} Gallary</h3>
+                    {this.renderElement()}
                 </div>
             </div>
         )
