@@ -9,4 +9,10 @@ async function GetPhotosId(input,number){
     photoList.map((item,index)=>{result.push(item.id);if(index>=number){return false}})
     return result;
 }
+
+async function GetPhotosUrl(input,number){
+    let idList = await GetPhotosId(input,number);
+    
+}
+
 export default GetPhotosId
