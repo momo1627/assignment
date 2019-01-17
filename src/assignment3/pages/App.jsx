@@ -26,14 +26,16 @@ export default class Gallary extends React.Component{
             sources:sources,
         })
     };
-    renderElement =()=>{
+    componentDidMount(){
+        
+    }
+    renderElement=()=>{
         const sources = this.state.sources;
-        // const element = sources.map(source=>{return(<Photo url={source} key={source} />)})
-        const element = sources.map(source =>{return (<span>{source}</span>)})
-        return element;
+        const element = sources.map(source=>{return(<Photo url={source.url} key={source.id} />)})
+        // const element = sources.map(source =>{return (<span>{source.url}</span>)})
     }
     render(){
-
+        
         return(
             <div>
                 <input type="text" onChange={this.handleChange} name='searchItem' value={this.state.searchItem }/><br/>
@@ -41,7 +43,7 @@ export default class Gallary extends React.Component{
                 <input type="button" onClick={this.handleSubmit} value='Search'/>
                 <div>
                     <h3>{this.state.searchItem} Gallary</h3>
-                    {this.renderElement()}
+                    {/* {element} */}
                 </div>
             </div>
         )

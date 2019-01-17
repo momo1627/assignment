@@ -2,7 +2,7 @@ import React from 'react';
 import styled,{css} from 'styled-components'
 export default function Photo(props){
     return(
-        <IMG src={props.url} alt={props.key}/>
+        <IMG src={props.url} alt={props.key} />
     )
 }
 const IMG = styled.img`
