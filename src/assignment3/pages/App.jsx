@@ -33,7 +33,6 @@ export default class Gallary extends React.Component{
     }
     renderElement=()=>{
         const sources = this.state.sources;
-        // const element = sources.map(source =>{return (<span>{source.url}</span>)})
 
         const element = sources.map(source=>{return(<Photo url={source} key={source} />)})
         return element
@@ -47,7 +46,8 @@ export default class Gallary extends React.Component{
                 <label htmlFor="">number of photos:</label>
                 <input type="text" onChange={this.handleChange} name='searchNumber' value={this.state.searchNumber }/>
                 <input type="button" onClick={this.handleSubmit} value='Search'/><br/>
-                <label htmlFor="">Size of Photos:</label>
+                <label htmlFor="">Size of Photos:
+                </label>
                 <select name="size" id="" onChange={this.handleChange}>
                     <option value="s">small</option>
                     <option value="t">thumbnall</option>
