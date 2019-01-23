@@ -6,9 +6,9 @@ const LogStatusFooter = ()=>{
         <div>
         <p>
             Show:
-            All Users:<LogFilterLink filter={LogStatusFilter.All}>ALL</LogFilterLink>
-            Login Users:<LogFilterLink filter={LogStatusFilter.Login}>Login</LogFilterLink>
-            Logout Users:<LogFilterLink filter={LogStatusFilter.Logout}>Logout</LogFilterLink>
+            All Users:<LogFilterLink filter={LogStatusFilter.All}>ALL</LogFilterLink><br/>
+            Login Users:<LogFilterLink filter={LogStatusFilter.Login}>Login</LogFilterLink><br/>
+            Logout Users:<LogFilterLink filter={LogStatusFilter.Logout}>Logout</LogFilterLink><br/>
         </p>
         </div>
         

@@ -1,12 +1,14 @@
 import React from 'react'
+import {Button} from './Button'
+
 const IdentityLink = ({active,onClick,children}) =>{
     if(active){
         return <span>{children}</span>
     }
     return (
-        <a href="" onClick={e=>{e.preventDefault();onClick()}}>
+        <Button href="" onClick={e=>{e.preventDefault();onClick()}}>
         {children}
-        </a>
+        </Button>
     )
 }
 export default IdentityLink

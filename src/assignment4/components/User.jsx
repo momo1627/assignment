@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 import Identity from './Identity'
 import Username from './Username'
 import LogStatus from './LogStatus'
+import {Button} from './Button'
 const User = ({showIdentity,username,identity,logStatus,onToggleLog,onToggleIdentity}) =>{
     return (
         <li>
@@ -10,8 +11,8 @@ const User = ({showIdentity,username,identity,logStatus,onToggleLog,onToggleIden
                 showIdentity ? <Identity identity={identity} /> : <Username username={username}/>
             }
             <LogStatus logStatus={logStatus} toggleLog={onToggleLog}/>
-            <button onClick={onToggleIdentity}>
-            {showIdentity?'Show Username':'Show Identity'}</button>
+            <Button onClick={onToggleIdentity}>
+            {showIdentity?'Show Username':'Show Identity'}</Button>
         </li>
     )
 }
@@ -23,4 +24,5 @@ User.PropTypes = {
     ontoggleLog:PropTypes.func.isRequired,
     onShowIdentity:PropTypes.func.isRequired,
 }
+
 export default User

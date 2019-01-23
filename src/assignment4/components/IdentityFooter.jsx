@@ -6,10 +6,10 @@ const IdentityFooter = ()=>{
         <div>
         <p>
             Show:
-            All Users:<IdentityFilterLink filter={IdentityFilter.All}>ALL</IdentityFilterLink>
-            Admin Users:<IdentityFilterLink filter={IdentityFilter.Admin}>Admin</IdentityFilterLink>
-            Visitor Users:<IdentityFilterLink filter={IdentityFilter.Visitor}>Visitor</IdentityFilterLink>
-        </p>
+            All Users:<IdentityFilterLink filter={IdentityFilter.All}>ALL</IdentityFilterLink><br/>
+            Admin Users:<IdentityFilterLink filter={IdentityFilter.Admin}>Admin</IdentityFilterLink><br/>
+            Visitor Users:<IdentityFilterLink filter={IdentityFilter.Visitor}>Visitor</IdentityFilterLink><br/>
+        </p><br/>
         </div>
         
     )

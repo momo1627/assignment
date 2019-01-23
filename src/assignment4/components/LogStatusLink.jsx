@@ -1,13 +1,15 @@
 import React from 'react'
 import Proptypes from 'prop-types'
+import {Button} from './Button'
+
 const LogStatusLink = ({active,onClick,children})=>{
     if(active){
         return <span>{children}</span>       
     }
     return(
-        <a href="#" onClick={e=>{e.preventDefault();onClick()}}>
+        <Button href="#" onClick={e=>{e.preventDefault();onClick()}}>
             {children}
-        </a>
+        </Button>
     )
 }
 LogStatusLink.Proptypes = {

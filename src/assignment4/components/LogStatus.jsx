@@ -1,9 +1,10 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import {Button} from './Button'
 const LogStatus = ({logStatus,toggleLog})=>{
     return(
         <span> is {logStatus? 'login' : 'logout'}
-            <button onClick={toggleLog}>{!logStatus? 'login' : 'logout'}</button>
+            <Button onClick={toggleLog}>{!logStatus? 'login' : 'logout'}</Button>
         </span>
         
     )
