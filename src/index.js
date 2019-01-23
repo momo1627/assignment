@@ -23,9 +23,21 @@ import ReactDOM from 'react-dom';
 // ReactDOM.render(<App />, document.getElementById('root'));
 
 //assignment 3 
-import App from './assignment3/pages/App'
-ReactDOM.render(<App />, document.getElementById('root'));
+// import App from './assignment3/pages/App'
+// ReactDOM.render(<App />, document.getElementById('root'));
 
+//assignment 4
+import {Provider} from 'react-redux'
+import {createStore} from 'redux'
+import addUser from './assignment4/reducers/user'
+import App from './assignment4/components/App'
+const store = createStore(addUser,window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__())
+ReactDOM.render(
+    <Provider store={store}>
+       <App />
+    </Provider>
+, 
+document.getElementById('root'));
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.
 // Learn more about service workers: http://bit.ly/CRA-PWA
